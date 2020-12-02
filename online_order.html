@@ -41,6 +41,12 @@
         display: flex;
         align-items: center;
         margin-bottom: 43px;
+        padding: 10px 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .items:hover{
+        background-color: rgba(255 ,255, 255, .1);
     }
     .items img{
         width: 80px;
@@ -57,10 +63,71 @@
         width: 30%;
         height: 100%;
     }
-    #item_bar .hh{
-        width: 85%;
+    #item_bar .hh{  width: 85%;}
 
-}
+    .detail{
+        background-color: rgb(33, 33, 33);
+        position: absolute;
+        top: -100%;
+        left: 33vw;
+        z-index: 1;
+        width: 450px;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        padding-bottom: 20px;
+        transition: .5s;
+    }
+    .detail img{
+        width: 450px;
+    }
+    .detail h1{
+        font-size: x-large;
+        padding: 25px;
+    }
+    .detail span{   font-size: larger;}
+    #add_order{    
+        display: block;
+        margin: 0 auto; 
+        width: 83%;
+        font-size: large;
+        padding: 10px;
+    }
+    #quantity{
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+    }
+    #quantity article{     
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        background-color:;
+    }
+    #quantity article button{
+        color: white;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 20px;
+    }
+    #quan_input{
+        background-color: rgb(33, 33, 33);
+        width: 25px;
+        border: none;
+        outline: none;
+        font-size: large;
+        color: white;
+        margin-left: 10px;
+    }
+    .fa-times-circle{
+        font-size: 25px;
+        position: absolute;
+        top: -5px;
+        right: -10px;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
+            -webkit-appearance: none;}
 </style>
 <body>
     <img  id="bg_img" src=".\img\vege1.jpg" alt="">
@@ -83,46 +150,111 @@
             <h1 style="font-size: xx-large;">Menu</h1>
             <p id="md">Menu Description Menu Description Menu Description Menu Description Menu Description Menu Description Menu Description Menu Description</p>
             <hr style="width: 62%; margin-bottom: 15px;">
-            <article class="items">
+
+            <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
                     <img src="img/vege1.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <h2>Itemm_NAme1</h2>
+                    <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">10</span>
             </article>
 
             <hr class="hh">
-            <article class="items">
+            <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
                     <img src="img/vege1.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <h2>Itemm_NAme2</h2>
+                    <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
-                <span  class="rs sp">₹</span><span class="price sp">10</span>
+                <span  class="rs sp">₹</span><span class="price sp">20</span>
             </article>
 
             <hr class="hh">
-            <article class="items">
+            <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
                     <img src="img/vege1.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <h2>Itemm_NAme3</h2>
+                    <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
-                <span  class="rs sp">₹</span><span class="price sp">10</span>
+                <span  class="rs sp">₹</span><span class="price sp">30</span>
             </article>
-    </section>
+        </section>
+
+        <section class="detail" id="detail">
+            <picture id="pic">
+                <img src="img/vege1.jpg" alt="">
+            </picture>
+            <i class="fa fa-times-circle" onclick="rem()"></i>
+            <h1 id="in">Item_Name</h1>
+            <span style="margin-left: 25px;">₹</span><span id="rs">20</span>
+            <p style="margin: 25px 25px;" id="para">Description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, aliquam?</p>
+            <article id="quantity" style="margin: 30px 25px 10px 25px;">
+                Quantity
+                <article>
+                    <button id="btn_1" onclick="dec()" disabled><i class="fa fa-minus-circle" id="minus"></i></button>
+                    <input type="number" id="quan_input" value="1" disabled>
+                    <button id="btn_2" onclick="inc()"><i class="fa fa-plus-circle" id="plus"></i></button>
+                </article>
+            </article>
+            <button id="add_order"><i class="fa fa-plus" ></i>&nbsp &nbsp ADD TO MY ORDER</button>
+        </section>
 
         <section id="order_bar"> 
 
        </section>
     </section>
 
+    <script>
+        var box=document.getElementById('detail');
+        var pic=document.getElementById('pic');
+        var itm=document.getElementById('in');
+        var rs=document.getElementById('rs');
+        var para=document.getElementById('para');
+
+        function fun(){
+            box.style.top='50px';
+            var itm2=z[3].childNodes;
+            itm.innerHTML=itm2[1].innerHTML;
+            para.innerHTML=itm2[3].innerHTML;
+            rs.innerHTML=z[6].innerHTML;
+            // console.log(z);
+            pic.innerHTML=z[1].innerHTML;
+        }
+
+        function rem(){
+            box.style.top='-100%';
+        }
+    </script>
+
+    <script>
+        var bt=document.getElementById("btn_1");
+        var num=document.getElementById("quan_input");
+
+        function inc(){
+            document.getElementById("quan_input").stepUp(1);
+            if(bt.disabled==true)
+            bt.disabled=false;
+        }
+        
+        function dec(){
+            document.getElementById("quan_input").stepDown(1);
+        }
+
+        function check(){
+            if(num.value<2){
+                bt.disabled=true;
+            }
+        }
+        bt.addEventListener("click",check);
+
+
+    </script>
 </body>
 </html>
