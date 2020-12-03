@@ -20,7 +20,7 @@
             Alex.JS
         </article>
         <ul id="nav_bar">
-            <li><a href="">Home</a></li>
+            <li><a href="https://0124hitesh.github.io/Fullstack-Project/">Home</a></li>
             <li><a href="">Bar</a></li>
             <li><a href="">Menu</a></li>
             <li><a href="https://0124hitesh.github.io/Fullstack-Project/online_order.html">Order online</a></li>
@@ -37,7 +37,7 @@
             <h3>RESERVATION</h3>
             <br><br>
 
-            <input type="date">
+            <input type="date" id="dt" min="2020-11-3">
             <br>
 
             <input list="time" placeholder="Time" id="time">
@@ -93,5 +93,18 @@
         
     </section>
 
+    <script>
+        var dt=document.getElementById('dt');
+        var ts=new Date();
+        var day=ts.getDate();
+        var mo=ts.getMonth()+1;
+        var yr=ts.getFullYear();
+        if(mo < 10)
+        month = '0' + mo.toString();
+        if(day < 10)
+        day = '0' + day.toString();
+        const dt_min=yr+"-"+mo+"-"+day;
+        dt.setAttribute('min',dt_min)
+    </script>
 </body>
 </html>
