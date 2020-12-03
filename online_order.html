@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
@@ -139,7 +140,8 @@
     .art_ci{
         font-size: large;
         color: white;
-        padding: 20px;
+        padding: 20px ;
+        padding-bottom: 0px;
         display: flex;
         justify-content: space-between;
     }
@@ -160,8 +162,17 @@
         height: 2px;
         background-color: white;
     }
+    #order_btn{
+        width: 70%;
+        display: block;
+        margin: 25px auto;
+        font-size: 20px;
+        padding: 10px;
+        font-weight: 600;
+    }
     input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
             -webkit-appearance: none;}
+            input[type=number] {    -moz-appearance: textfield;}
 </style>
 <body>
     <img  id="bg_img" src=".\img\vege1.jpg" alt="">
@@ -256,6 +267,7 @@
                     <span>₹</span><span id="subtotal">0</span>
                 </article>
             </section>
+            <button id="order_btn">ORDER NOW &nbsp<i class="fas fa-angle-right"></i></button>
        </section>
     </section>
 
