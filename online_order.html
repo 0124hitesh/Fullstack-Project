@@ -59,7 +59,6 @@
     .items .sp{     font-size: x-large;}
     .items .rs{     margin-left: 30px;}
     #oo #order_bar{
-        background-color: red;
         width: 30%;
         height: 100%;
     }
@@ -67,7 +66,7 @@
 
     .detail{
         background-color: rgb(33, 33, 33);
-        position: absolute;
+        position: fixed;
         top: -100%;
         left: 33vw;
         z-index: 1;
@@ -125,7 +124,42 @@
         top: -5px;
         right: -10px;
     }
-
+    #order_bar #order_count,#order_bar #total{
+        padding: 20px 15px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-family:sans-serif;
+        border-bottom: .5px solid rgba(255 ,255, 255, .5);
+    }
+    #orders{    
+        min-height: 300px;
+    }
+    .art_ci{
+        font-size: large;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .art_ci .ci{
+        white-space: nowrap;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .items h2{  margin-bottom: 10px;}
+    #order_bar #total{  margin-top: 10px; position: relative;}
+    #order_bar #total::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: auto;
+        width: 90%;
+        height: 2px;
+        background-color: white;
+    }
     input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
             -webkit-appearance: none;}
 </style>
@@ -157,7 +191,7 @@
                 </picture>
                 <article class="desc">
                     <h2>Itemm_NAme1</h2>
-                    <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <p>1 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">10</span>
             </article>
@@ -169,7 +203,7 @@
                 </picture>
                 <article class="desc">
                     <h2>Itemm_NAme2</h2>
-                    <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <p>2 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">20</span>
             </article>
@@ -181,7 +215,7 @@
                 </picture>
                 <article class="desc">
                     <h2>Itemm_NAme3</h2>
-                    <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
+                    <p>3 it. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">30</span>
             </article>
@@ -203,13 +237,65 @@
                     <button id="btn_2" onclick="inc()"><i class="fa fa-plus-circle" id="plus"></i></button>
                 </article>
             </article>
-            <button id="add_order"><i class="fa fa-plus" ></i>&nbsp &nbsp ADD TO MY ORDER</button>
+            <button id="add_order" onclick="add_ord()"><i class="fa fa-plus"></i>&nbsp &nbsp ADD TO MY ORDER</button>
         </section>
 
         <section id="order_bar"> 
+            <article id="order_count">
+                My Order
+                <span id="count">0 items</span>
+            </article>
 
+            <section id="orders">
+                
+            </section>
+
+            <section id="total">
+                Subtotal
+                <article>
+                    <span>₹</span><span id="subtotal">0</span>
+                </article>
+            </section>
        </section>
     </section>
+
+    <script>
+        
+        var orders=document.getElementById('orders');
+        var item_name=document.getElementById('in');
+        var item_price=document.getElementById('rs');
+        var item_count=document.getElementById('quan_input');
+        var total_price=document.getElementById('subtotal');
+        var total_count=document.getElementById('count');
+
+        function rem(){     box.style.top='-100%';  }
+        
+        function add_ord(){
+            var art=document.createElement('ARTICLE');
+            orders.appendChild(art);
+            art.classList.add('art_ci');
+
+            var span1=document.createElement('SPAN');
+            art.appendChild(span1);
+            span1.innerHTML=item_count.value + " × " + item_name.innerHTML;
+            
+            var art_child=document.createElement('ARTICLE');
+            art.appendChild(art_child);
+            var span2=document.createElement('SPAN');
+            var span3=document.createElement('SPAN');
+            art_child.appendChild(span2);
+            span2.innerHTML='₹';
+            art_child.appendChild(span3);
+            span3.innerHTML=parseInt(item_count.value)*parseInt(item_price.innerHTML);
+
+            total_price.innerHTML=parseInt(total_price.innerHTML)+parseInt(span3.innerHTML);
+            total_count.innerHTML=parseInt(total_count.innerHTML)+parseInt(item_count.value)+" items";
+            
+            rem();
+            item_count.value=1;
+            
+        }
+    </script>
 
     <script>
         var box=document.getElementById('detail');
@@ -226,10 +312,6 @@
             rs.innerHTML=z[6].innerHTML;
             // console.log(z);
             pic.innerHTML=z[1].innerHTML;
-        }
-
-        function rem(){
-            box.style.top='-100%';
         }
     </script>
 
