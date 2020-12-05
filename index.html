@@ -9,27 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="https://0124hitesh.github.io/Fullstack-Project/css/home.css">
-
 </head>
 
 <style>
-    input[type='checkbox'],#bar,#times{    display: none;} 
+    input[type='checkbox'],#bar,#times {    
+        display: none;
+        } 
     
-    @media (max-width: 340px){
+    @media (max-width: 340px) {
         
-        #common,#sec2,#res_name{    width: 350px !important;}
-        #sec2{  display: unset; }
-        #left_bar{ width: 320px;}
-        .fa-bars, .fa-times{
+        #common,#sec2,#res_name {    
+            width: 350px !important;
+        }
+        #sec2 {  
+            display: unset; 
+        }
+        #left_bar { 
+            width: 320px;
+        }
+        .fa-bars, .fa-times {
             font-size: 25px !important;
             position: absolute;
             top: 10px;
             right: 10px;
             z-index: 2;
         }
-        #bar{   display: unset;}
-        #times{  display: none; color: white;}
-        #nav_bar{ 
+        #bar {   
+            display: unset;
+        }
+        #times {  
+            display: none; color: white;
+        }
+        #nav_bar { 
             width: 330px;
             display: unset;
             text-align: center;
@@ -42,14 +53,16 @@
             padding: 15px;
             display: none;
         }
-        #nav_bar li{   padding: 10px;}
-        #chk:checked ~ #bar{
+        #nav_bar li {   
+            padding: 10px;
+            }
+        #chk:checked ~ #bar {
             display: none;
         }
-        #chk:checked ~ #times{ 
+        #chk:checked ~ #times { 
             display: unset;
         }
-        #chk:checked ~ #nav_bar{
+        #chk:checked ~ #nav_bar {
             display: unset;
         }
     }
@@ -145,9 +158,9 @@
         var mo=ts.getMonth()+1;
         var yr=ts.getFullYear();
         if(mo < 10)
-        month = '0' + mo.toString();
+            month = '0' + mo.toString();
         if(day < 10)
-        day = '0' + day.toString();
+            day = '0' + day.toString();
         const dt_min=yr+"-"+mo+"-"+day;
         dt.setAttribute('min',dt_min)
     </script>
