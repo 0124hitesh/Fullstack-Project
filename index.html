@@ -12,10 +12,55 @@
 
 </head>
 
-
+<style>
+    input[type='checkbox'],#bar,#times{    display: none;} 
+    
+    @media (max-width: 351px){
+        
+        #common,#sec2,#res_name{    width: 350px !important;}
+        #sec2{  display: unset; }
+        #left_bar{ width: 330px;}
+        .fa-bars, .fa-times{
+            font-size: 25px !important;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 2;
+        }
+        #bar{   display: unset;}
+        #times{  display: none; color: white;}
+        #nav_bar{ 
+            width: 350px;
+            display: unset;
+            text-align: center;
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            flex-direction: column;
+            background-color: black;
+            padding: 15px;
+            display: none;
+        }
+        #nav_bar li{   padding: 10px;}
+        #chk:checked ~ #bar{
+            display: none;
+        }
+        #chk:checked ~ #times{ 
+            display: unset;
+        }
+        #chk:checked ~ #nav_bar{
+            display: unset;
+        }
+    }
+</style>
 <body>
     <img  id="bg_img" src=".\img\vege1.jpg" alt="">
     <section id="common">
+        <input type="checkbox" name="chk" id="chk">
+        <label for="chk" id="bar"><i class="fas fa-bars"></i></label>
+        <label for="chk" id="times"><i class="fas fa-times"></i></label>
+
         <article id="res_name">
             Alex.JS
         </article>
@@ -37,11 +82,11 @@
             <h3>RESERVATION</h3>
             <br><br>
 
-            <input type="date" id="dt" min="2020-11-3">
+            <input type="date" id="dt" placeholder="Date">
             <br>
 
-            <input list="time" placeholder="Time" id="time">
-            <datalist id="time">
+            <input list="ti" placeholder="Time" id="time">
+            <datalist id="ti">
                 <option value="09:00 AM"></option>
                 <option value="10:00 AM"></option>
                 <option value="11:00 AM"></option>
