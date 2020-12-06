@@ -134,3 +134,19 @@ body {
     width: 650px !important;
     background-color: rgb(38, 50, 56);
 }
+#slider{
+    background-color: yellow;
+    height: 300px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 30px;
+}
+#img_contact1, #img_contact2, #img_contact3{
+    height: 300px;
+}
+#g-map{
+    display: flex;
+    justify-content: center;
+    margin: 10px 30px;
+}
