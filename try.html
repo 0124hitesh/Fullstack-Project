@@ -1,46 +1,284 @@
-<div class="c1inlineContent" id="Cntnr6inlineContent"><style id="Cntnr6-mesh-styles">
-    
-#Cntnr6inlineContent {
-    height: auto;
-    width: 600px;
-    position: relative;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-#Cntnr6inlineContent-gridWrapper {
-    pointer-events: none;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar</title>
 
-#Cntnr6inlineContent-gridContainer {
-    position: static;
-    display: grid;
-    height: auto;
-    width: 100%;
-    min-height: 1135px;
-    grid-template-rows: 1fr;
-    grid-template-columns: 100%;
-}
 
-#ibrouov1 {
-    position: relative;
-    margin: 37px 0px 10px 0;
-    left: 32px;
-    grid-area: 1 / 1 / 2 / 2;
-    justify-self: start;
-    align-self: start;
-}
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="./css1/linearicons.css">
+    <link rel="stylesheet" href="./css1/font-awesome.min.css">
+    <link rel="stylesheet" href="./css1/bootstrap.css">
+    <link rel="stylesheet" href="./css1/magnific-popup.css">
+    <link rel="stylesheet" href="./css1/jquery-ui.css">
+    <link rel="stylesheet" href="./css1/nice-select.css">
+    <link rel="stylesheet" href="./css1/animate.min.css">
+    <link rel="stylesheet" href="./css1/owl.carousel.css">
+    <link rel="stylesheet" href="./css1/main.css">
 
-#Cntnr6centeredContent {
-    position: relative;
-}
 
-#Cntnr6inlineContent-gridContainer > * {
-    pointer-events: auto;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 
-#Cntnr6inlineContent-gridContainer > [id$="-rotated-wrapper"] {
-    pointer-events: none;
-}
 
-#Cntnr6inlineContent-gridContainer > [id$="-rotated-wrapper"] > * {
-    pointer-events: auto;
-}</style><div id="Cntnr6inlineContent-gridWrapper" data-mesh-internal="true"><div id="Cntnr6inlineContent-gridContainer" data-mesh-internal="true"><div title="" data-is-responsive="false" data-display-mode="fill" data-content-padding-horizontal="0" data-content-padding-vertical="0" data-exact-height="440" class="ca1" id="ibrouov1" style="width: 537px; height: 440px;"><div id="ibrouov1link" class="ca1link" style="width: 537px; height: 440px;"><wix-image data-has-bg-scroll-effect="" data-image-info="{&quot;imageData&quot;:{&quot;type&quot;:&quot;Image&quot;,&quot;id&quot;:&quot;csuh&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;crrl&quot;,&quot;isPreset&quot;:true,&quot;schemaVersion&quot;:&quot;2.0&quot;,&quot;isHidden&quot;:false},&quot;title&quot;:&quot;&quot;,&quot;uri&quot;:&quot;84770f_e6154dd2bec643aa88cb96c954c04394.jpg&quot;,&quot;description&quot;:&quot;&quot;,&quot;width&quot;:532,&quot;height&quot;:469,&quot;alt&quot;:&quot;&quot;,&quot;originalImageDataRef&quot;:{&quot;type&quot;:&quot;Image&quot;,&quot;id&quot;:&quot;original_image_42h&quot;,&quot;metaData&quot;:{&quot;pageId&quot;:&quot;crrl&quot;,&quot;isPreset&quot;:true,&quot;schemaVersion&quot;:&quot;2.0&quot;,&quot;isHidden&quot;:false},&quot;title&quot;:&quot;&quot;,&quot;uri&quot;:&quot;846c8282861b4ca2a7d37e37778593dc.jpg&quot;,&quot;description&quot;:&quot;&quot;,&quot;width&quot;:532,&quot;height&quot;:800,&quot;alt&quot;:&quot;&quot;},&quot;displayMode&quot;:&quot;fill&quot;},&quot;containerId&quot;:&quot;ibrouov1&quot;,&quot;displayMode&quot;:&quot;fill&quot;}" data-has-ssr-src="" data-is-svg="false" data-is-svg-mask="false" id="ibrouov1img" class="ca1img" style="width: 537px; height: 440px;" data-src="https://static.wixstatic.com/media/84770f_e6154dd2bec643aa88cb96c954c04394.jpg/v1/fill/w_537,h_440,al_c,lg_1,q_80/84770f_e6154dd2bec643aa88cb96c954c04394.webp"><img id="ibrouov1imgimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/84770f_e6154dd2bec643aa88cb96c954c04394.jpg/v1/fill/w_537,h_440,al_c,lg_1,q_80/84770f_e6154dd2bec643aa88cb96c954c04394.webp" style="width: 537px; height: 440px; object-fit: cover;"></wix-image></div></div></div></div></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<style>
+    input[type='checkbox'],
+    #bar,
+    #times {
+        display: none;
+    }
+
+    @media (max-width: 320px) {
+
+        #common,
+        #sec2,
+        #res_name {
+            width: 320px !important;
+        }
+
+        #sec2 {
+            display: unset;
+        }
+
+        #left_bar {
+            width: 320px;
+        }
+
+        .fa-bars,
+        .fa-times {
+            font-size: 25px !important;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 2;
+        }
+
+        #bar {
+            display: unset;
+        }
+
+        #times {
+            display: none;
+            color: white;
+        }
+
+        #nav_bar {
+            width: 310px;
+            display: unset;
+            text-align: center;
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            flex-direction: column;
+            background-color: black;
+            padding: 15px;
+            display: none;
+        }
+
+        #nav_bar li {
+            padding: 10px;
+        }
+
+        #chk:checked~#bar {
+            display: none;
+        }
+
+        #chk:checked~#times {
+            display: unset;
+        }
+
+        #chk:checked~#nav_bar {
+            display: unset;
+        }
+    }
+</style>
+
+<body>
+    <img id="bg_img" src=".\img\vege1.jpg" alt="">
+    <section id="common">
+        <input type="checkbox" name="chk" id="chk">
+        <label for="chk" id="bar"><i class="fas fa-bars"></i></label>
+        <label for="chk" id="times"><i class="fas fa-times"></i></label>
+
+        <article id="res_name">
+            Alex.JS
+        </article>
+        <ul id="nav_bar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">Bar</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./online_order.html">Order online</a></li>
+            <li><a href="">team</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </section>
+
+
+
+    <!-- Start reservation Area -->
+    <!-- <section class="reservation-area section-gap relative">
+
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6 reservation-left">
+                    <h1 class="text-white">Reserve Your Seats
+                        to Confirm if You Come
+                        with Your Family</h1>
+                    <p class="text-white pt-20">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea.
+                    </p>
+                </div>
+                <div class="col-lg-5 reservation-right">
+                    <form class="form-wrap text-center" action="{{url_for('menu')}}" method="POST">
+                        <input type="text" class="form-control" name="name" placeholder="Your Name"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email Address"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'">
+                        <input type="text" class="form-control" name="phone" placeholder="Phone Number"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'">
+                        <input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time"
+                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'">
+                        <div class="form-select" id="service-select">
+                            <select name="tvalue">
+                                <option data-display="">Select Event</option>
+                                <option value="1">Event One</option>
+                                <option value="2">Event Two</option>
+                                <option value="3">Event Three</option>
+                                <option value="4">Event Four</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="primary-btn text-uppercase mt-20">Make Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End reservation Area -->
+
+    <!-- Start gallery-area Area -->
+    <section class="gallery-area section-gap" id="gallery">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Food and Customer Gallery</h1>
+                        <p>Who are in extremely love with eco friendly system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="filter-wrap filters col-lg-12 no-padding">
+                <li class="active" data-filter="*">All Menu</li>
+                <li data-filter=".breakfast">Breakfast</li>
+                <li data-filter=".lunch">Lunch</li>
+                <li data-filter=".dinner">Dinner</li>
+                <li data-filter=".budget-meal">Budget Meal</li>
+                <li data-filter=".buffet">Buffet</li>
+            </ul>
+
+
+            <div class="filters-content">
+                <div class="row grid">
+                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 all dinner">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 all budget-meal">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 all lunch">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 all buffet">
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="./img/g6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End gallery-area Area -->
+    <section id="address1">
+        <p class="addr">500 Terry Francois Street</p>
+        <p class="addr">SF, CA 94158</p>
+        <p class="addr">Open Everyday 9AM to 11PM</p>
+
+        <article id="social">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+        </article>
+    </section>
+
+    <script>
+        var dt = document.getElementById('dt');
+        var ts = new Date();
+        var day = ts.getDate();
+        var mo = ts.getMonth() + 1;
+        var yr = ts.getFullYear();
+        if (mo < 10)
+            month = '0' + mo.toString();
+        if (day < 10)
+            day = '0' + day.toString();
+        const dt_min = yr + "-" + mo + "-" + day;
+        dt.setAttribute('min', dt_min)
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script src="./js1/vendor/jquery-2.2.4.min.js"></script>
+    <script src="./js1/popper.min.js"></script>
+    <script src="./js1/vendor/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="./js1/jquery-ui.js"></script>
+    <script src="./js1/easing.min.js"></script>
+    <script src="./js1/hoverIntent.js"></script>
+    <script src="./js1/superfish.min.js"></script>
+    <script src="./js1/jquery.ajaxchimp.min.js"></script>
+    <script src="./js1/jquery.magnific-popup.min.js"></script>
+    <script src="./js1/jquery.nice-select.min.js"></script>
+    <script src="./js1/owl.carousel.min.js"></script>
+    <script src="./js1/isotope.pkgd.min.js"></script>
+    <script src="./js1/mail-script.js"></script>
+    <script src="./js1/main.js"></script>
+</body>
+
+</html>

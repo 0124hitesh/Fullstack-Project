@@ -101,12 +101,20 @@ body {
 #left_bar button:hover {
     background-color: rgba(236, 239, 241,.8);
 }
-#address {
-    margin-top: 80px;
-    position: relative;
-    padding-top: 50px;
+#address1 {
+            background-color: rgb(38, 50, 56);
+            color: white;
+            width: 300px;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            flex-direction: column;
+           
+            font-family: 'Yellowtail', cursive;
 }
-#address::before {
+#address1::before {
     content: '';
     height: 1px;
     width: 200px;
