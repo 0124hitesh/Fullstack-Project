@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://0124hitesh.github.io/Fullstack-Project/css/home.css">
+    <style>
+        input[type='checkbox'],#bar,#times {    
+            display: none;
+            } 
+    
+        @media (max-width: 340px) {
+        
+            #common,#sec2,#res_name {    
+                width: 350px !important;
+            }
+            #sec2 {  
+                display: unset; 
+            }
+            #left_bar { 
+                width: 320px;
+            }
+            .fa-bars, .fa-times {
+                font-size: 25px !important;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 2;
+            }
+            #bar {   
+                display: unset;
+            }
+            #times {  
+                display: none; color: white;
+            }
+            #nav_bar { 
+                width: 330px;
+                display: unset;
+                text-align: center;
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                flex-direction: column;
+                background-color: black;
+                padding: 15px;
+                display: none;
+            }
+            #nav_bar li {   
+                padding: 10px;
+            }
+            #chk:checked ~ #bar {
+                display: none;
+            }
+            #chk:checked ~ #times { 
+                display: unset;
+            }
+            #chk:checked ~ #nav_bar {
+                display: unset;
+            }
+        }
+
+        #team {
+            width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #content {
+            background-color: rgb(38, 50, 56);
+            color: white;
+            width: 300px;
+        }
+
+        #para {
+            font-size: medium;
+            text-align: justify;
+            padding: 30px;
+        }
+
+        #h2 {
+            margin: 25px 30px;
+            color: rgb(219, 219, 219);
+        }
+
+        #para1 {
+            margin: 5px 30px;
+            width: 300px;
+            text-align: justify;
+            color: white;
+        }
+
+        #para2 {
+            margin: 30px;
+            width: 300px;
+            text-align: justify;
+            color: white;
+        }
+
+        #para3, #para4 {
+            margin: 30px;
+            width: 250px;
+            text-align: justify;
+            color: white;
+        }
+
+        #address {
+            margin-top: 170px;
+        }
+
+        #address::before {
+            content: '';
+            height: 1px;
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            top: 0px;
+            left: 50px;
+        }
+
+        #C {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #chef {
+            float: right; 
+            width: 45%;
+            margin-top: 75px;
+            height: 170px;
+        }
+
+        #head {
+            float: left;
+            width: 44.6%;
+            margin-top: 95px;
+            height: 180px;
+        }
+    </style>
+</head>
+<body style="height: 1100px;">
+    <img  id="bg_img" src=".\img\vege1.jpg" alt="">
+    <section id="common">
+        <input type="checkbox" name="chk" id="chk">
+        <label for="chk" id="bar"><i class="fas fa-bars"></i></label>
+        <label for="chk" id="times"><i class="fas fa-times"></i></label>
+
+        <article id="res_name">
+            Alex.JS
+        </article>
+
+        <ul id="nav_bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="./bar.html">Bar</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./online_order.html">Order online</a></li>
+            <li><a href="">team</a></li>
+            <li><a href="./contact.html">contact</a></li>
+        </ul>
+    </section>
+
+    <section id="team">
+        <article id="content">
+            <h2 id="h2" style="text-align: center;">Meet the Team</h2>
+            <p id="para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur perspiciatis praesentium, laboriosam eum recusandae, sed possimus facere quod! Incidunt, vitae? Sapiente inventore labore officia voluptate quaerat, incidunt consequatur fugiat deleniti possimus voluptatibus, sequi rem, aut blanditiis sed.
+            </p>
+            <p id="para" style="padding-top: 0;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis qui pariatur! Quasi nobis necessitatibus tenetur omnis minima assumenda deserunt hic? Eaque tempora numquam, omnis sunt consectetur impedit dignissimos corrupti harum voluptatibus ea laudantium deleniti necessitatibus officia iure commodi accusantium nobis aut sint nihil deserunt. Necessitatibus repellat blanditiis a voluptatum.
+            </p>
+            <section id="address">
+                <p class="addr">500 Terry Francois Street</p>
+                <p class="addr">SF, CA 94158</p>
+                <p class="addr">Open Everyday 9AM to 11PM</p>
+    
+                <article id="social">
+                   <i class="fab fa-instagram"></i>
+                   <i class="fab fa-facebook-square"></i>
+                   <i class="fab fa-twitter"></i>
+                </article>
+            </section>
+        </article>
+
+        <section id="right_bar">
+            <img src="https://raw.githubusercontent.com/0124hitesh/Fullstack-Project/master/img/chef.jpg" alt="qwertyu" id="chef">
+
+            <h3 id="h2">Mr. Ranveer Brar - Head Chef</h3>
+            <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis sed similique doloribus nemo eius quas 
+                delectus id, ex accusantium numquam veritatis, obcaecati in corporis et temporibus aut voluptatum doloremque 
+                autem assumenda perspiciatis! Assumenda hic minus temporibus deserunt totam culpa quae tenetur nostrum beatae Quod adipisci, 
+                facilis sequi non rerum nulla tenetur dolorum excepturi.</p>
+            
+
+            <hr style="height: 0px; width: 91%; margin: 25px 25px 0 25px;">
+
+            <img src="https://raw.githubusercontent.com/0124hitesh/Fullstack-Project/master/img/head.jpg" alt="qwertyu" id="head">
+
+            <div style="float: right;">
+                <h3 id="h2">Ravi Mishra - General Manager</h3>
+                <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis sed similique doloribus nemo eius quas 
+                    delectus id, ex accusantium numquam veritatis, obcaecati in corporis et temporibus aut voluptatum doloremque </p>
+                <p id="para2">Autem assumenda perspiciatis! Assumenda hic minus temporibus deserunt totam culpa quae tenetur nostrum beatae Quod adipisci, 
+                    facilis sequi non rerum nulla tenetur dolorum excepturi.</p>
+            </div>
+
+            <hr style="height: 0px; width: 90%; margin: 25px 25px 0 25px;">
+            
+            <div id="C">
+                <div class="left">
+                    <h4 id="h2">Manish Agrawal - Restaurant Manager</h4>
+                    <p id="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis sed similique doloribus nemo eius quas 
+                        delectus id, ex accusantium numquam veritatis.</p> 
+                    <p id="para4">Assumenda hic minus temporibus deserunt totam culpa quae tenetur nostrum beatae Quod adipisci, 
+                        facilis sequi non rerum nulla tenetur dolorum excepturi.</p>
+                    </div>
+    
+                <div class="right">
+                    <h4 id="h2">Ayush Sharma - Bar Manager</h4>
+                    <p id="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis sed similique doloribus nemo eius quas 
+                        delectus id, ex accusantium numquam veritatis.</p> 
+                    <p id="para4">Assumenda hic minus temporibus deserunt totam culpa quae tenetur nostrum beatae Quod adipisci, 
+                        facilis sequi non rerum nulla tenetur dolorum excepturi.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
