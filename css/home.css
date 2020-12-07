@@ -151,5 +151,5 @@ input[type='checkbox'],#bar,#times {
 #g-map{
     display: flex;
     justify-content: center;
-    margin: 10px 30px;
+    margin: 30px 30px;
 }
