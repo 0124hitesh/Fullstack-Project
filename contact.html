@@ -34,9 +34,16 @@
         background-color: white;
         color: black;
     }
-    #address::before{
-        top: 400px;
-    }
+    
+    #address::before {
+    content: '';
+    height: 1px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: -23px;
+}
 </style>
 
 <body>
@@ -108,9 +115,9 @@
             <br>
 
              <button type="button">Book Now</button>
+             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
              <section id="address">
-                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                  <p class="addr">500 Terry Francois Street</p>
                  <p class="addr">SF, CA 94158</p>
                  <p class="addr">Open Everyday 9AM to 11PM</p>
@@ -119,6 +126,7 @@
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-twitter"></i>
+                    
                  </article>
              </section>
         </section>
