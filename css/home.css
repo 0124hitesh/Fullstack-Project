@@ -68,7 +68,7 @@ body {
     display: flex;
     /* justify-content: center; */
     align-items: center;
-
+    height: fit-content;
     color: white;
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
