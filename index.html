@@ -35,6 +35,44 @@
         background-color: white;
         color: black;
     }
+
+    @media (max-width: 351px){
+        #right_bar{  display: none;}
+        #common,#sec2{    width: 350px;}
+        #res_name{
+            width: 300px;
+            margin: 0 auto;
+        }
+        #left_bar{  margin: 0 auto;}
+        #nav_bar{
+            background-color: black;
+            color: white;
+            width: 300px;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 25px;
+            z-index: 1;
+            padding: 20px 0;
+            display: none;
+        }
+        #nav_bar li{    padding: 8px;}
+        #nav_bar li:hover{  color: white;}
+        #bar,#times{
+            position: fixed;
+            top: 5px;
+            right: 40px;
+            z-index: 2;
+            color: white;
+            font-size: 25px;
+        }
+        #bar{   display: unset;}
+        #chk:checked ~ #bar{
+            display: none;
+        }
+        #chk:checked ~ #times{  display: unset;}
+        #chk:checked ~ #nav_bar{    display: flex;}
+    }
 </style>
 
 <body>
