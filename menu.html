@@ -31,6 +31,74 @@
         margin-bottom: 25px;
     }
     .fas{   font-size: 20px;}
+
+    @media (max-width: 351px){
+        #common,#sec2{    width: 350px;}
+        #common{    position: relative;}
+        #res_name{
+            width: 300px;
+            margin: 0 auto;
+        }
+        #left_bar{  margin: 0 auto;}
+        #nav_bar{
+            background-color: black;
+            color: white;
+            width: 300px;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 25px;
+            z-index: 1;
+            padding: 20px 0;
+            display: none;
+        }
+        #nav_bar li{    padding: 12px;}
+        #nav_bar li:hover{  color: white;}
+        #bar,#times{
+            position: absolute;
+            top: 5px;
+            right: 40px;
+            z-index: 2;
+            color: white;
+            font-size: 20px !important;
+        }
+        #bar{   display: unset;}
+        #chk:checked ~ #bar{
+            display: none;
+        }
+        #chk:checked ~ #times{  display: unset;}
+        #chk:checked ~ #nav_bar{    display: flex;}
+        .fa-bars, .fa-times{    font-size: 25px;   }
+        #sec2{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        #right_bar{
+            width: 300px !important;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            margin: 0 auto;
+        }
+        #left_bar::after{ 
+            content: '';
+            display: block;
+            width: 85.5%;
+            height: 5px;
+            background-color: grey;
+            position: absolute;
+            bottom: -125px;
+        }
+        #sec2 .ex{ visibility: hidden;}
+        #right_bar article::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin-top: 5px;
+            background-color: rgba(255,255,255,.5);
+        }
+    }
 </style>
 <body>
     <img  id="bg_img" src=".\img\vege1.jpg" alt="">
@@ -59,7 +127,7 @@
             <br><br>
             <p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
             <br><br><br><br><br><br>
-            <section id="address">
+            <!-- <section id="address">
                 <p class="addr">500 Terry Francois Street</p>
                 <p class="addr">SF, CA 94158</p>
                 <p class="addr">Open Everyday 9AM to 11PM</p>
@@ -69,41 +137,41 @@
                    <i class="fab fa-facebook-square"></i>
                    <i class="fab fa-twitter"></i>
                 </article>
-            </section>
+            </section> -->
         </section>
         
         <section id="right_bar">
             <article>
-                <h3 style="margin-bottom: 15px;">Bread with Olive Oil & Balsamic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   ₹109</h2>
+                <h3 style="margin-bottom: 15px;">Bread with Olive Oil & Balsamic<span class="ex">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   </span>₹109</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
                 <i class="fas fa-seedling" style="color: green;"></i>
             </article>
 
             <article>
-                <h3 style="margin-bottom: 15px;">Organic Spinach Salad . . . .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   ₹125</h2>
+                <h3 style="margin-bottom: 15px;">Organic Spinach Salad<span class="ex">. . . .  .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   </span>₹125</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
                 <i class="fas fa-seedling" style="color: green;"></i>
             </article>
 
             <article>
-                <h3 style="margin-bottom: 15px;">Oven Roasted Veggies . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   ₹180</h2>
+                <h3 style="margin-bottom: 15px;">Oven Roasted Veggies<span class="ex">. . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   </span>₹180</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
             </article>
 
             <article>
-                <h3 style="margin-bottom: 15px;">Tuna Tataki . . . . . . . . . . . . . . . . . . . .  . . .  . . . . . . . . . . . . . . . . . . . . . . .   ₹110</h2>
+                <h3 style="margin-bottom: 15px;">Tuna Tataki<span class="ex">. . . . . . . . . . . . . . . . . . . .  . . .  . . . . . . . . . . . . . . . . . . . . . . .   </span>₹110</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
                 <i class="fas fa-pepper-hot" style="color: red;"></i>
             </article>
 
             <article>
-                <h3 style="margin-bottom: 15px;">Aubergine rolls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   ₹250</h2>
+                <h3 style="margin-bottom: 15px;">Aubergine rolls<span class="ex">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   </span>₹250</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
                 <i class="fas fa-cookie" style="color: plum;"></i>&nbsp <i class="fas fa-pepper-hot" style="color: red;"></i>
             </article>
 
             <article>
-                <h3 style="margin-bottom: 15px;">Penne Aglio e Ollio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   ₹225</h2>
+                <h3 style="margin-bottom: 15px;">Penne Aglio e Ollio<span class="ex">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   </span>₹225</h2>
                 <p>I’m a dish description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dicta assumenda consequuntur quisquam aliquid ea aperiam autem, perferendis at tempore.</p>
             </article>
         </section>
