@@ -173,10 +173,89 @@
     input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
             -webkit-appearance: none;}
             input[type=number] {    -moz-appearance: textfield;}
+
+    @media (max-width: 351px){
+        #common{    
+            width: 350px;   
+            position: relative;
+        }
+        #res_name{
+            width: 350px;
+            margin: 0 auto;
+        }
+        #left_bar{  margin: 0 auto;}
+        #nav_bar{
+            background-color: black;
+            color: white;
+            width: 350px;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0px;
+            z-index: 1;
+            padding: 20px 0;
+            display: none;
+        }
+        #nav_bar li{    padding: 12px;}
+        #nav_bar li:hover{  color: white;}
+        #bar,#times{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            z-index: 2;
+            color: white;
+            font-size: 25px;
+        }
+        #bar{   display: unset;}
+        #chk:checked ~ #bar{
+            display: none;
+        }
+        #chk:checked ~ #times{  display: unset;}
+        #chk:checked ~ #nav_bar{    display: flex;}
+    }
+
+    @media (max-width: 351px){
+        #common{    width: 350px;}
+        #nav_bar{   display: none;}
+        #oo{   
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            }
+        #oo #item_bar{
+            width: 300px;
+            margin: 0 auto;
+            border: none;
+        }  
+        #oo #order_bar{
+            width: 300px;
+            margin: 0 auto;
+        } 
+        #oo #order_bar::before{
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            background-color: #fff;
+        }
+        #oo #detail{
+            width: 350px;
+            left: 0px;
+            top: 0px;
+            z-index: 3;
+        }
+        #oo #detail .fa-times-circle{
+            top: 10px;
+            right: 5px;
+        }
+    }
 </style>
 <body>
     <img  id="bg_img" src=".\img\vege1.jpg" alt="">
     <section id="common">
+        <input type="checkbox" name="chk" id="chk">
+        <label for="chk" id="bar"><i class="fas fa-bars"></i></label>
+        <label for="chk" id="times"><i class="fas fa-times"></i></label>
         <article id="res_name">
             Alex.JS
         </article>
