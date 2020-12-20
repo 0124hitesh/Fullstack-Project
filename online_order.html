@@ -289,7 +289,7 @@
                     <h2>Organic Spinach</h2>
                     <p>1 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
-                <span  class="rs sp">₹</span><span class="price sp">10</span>
+                <span  class="rs sp">₹</span><span class="price sp">119</span>
             </article>
 
             <hr class="hh">
@@ -301,7 +301,7 @@
                     <h2>Rosted Veggies</h2>
                     <p>2 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
-                <span  class="rs sp">₹</span><span class="price sp">20</span>
+                <span  class="rs sp">₹</span><span class="price sp">115</span>
             </article>
 
             <hr class="hh">
@@ -313,7 +313,7 @@
                     <h2>Tuna Tataki</h2>
                     <p>3 it. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
-                <span  class="rs sp">₹</span><span class="price sp">30</span>
+                <span  class="rs sp">₹</span><span class="price sp">150</span>
             </article>
         </section>
 
@@ -352,7 +352,7 @@
                     <span>₹</span><span id="subtotal">0</span>
                 </article>
             </section>
-            <button id="order_btn">ORDER NOW &nbsp<i class="fas fa-angle-right"></i></button>
+            <button id="order_btn" onclick="ref()">ORDER NOW &nbsp<i class="fas fa-angle-right"></i></button>
        </section>
     </section>
 
@@ -432,6 +432,10 @@
             }
         }
         bt.addEventListener("click",check);
+
+        function ref(){
+            window.location.href = "./payment.html";
+        }
 
 
     </script>
