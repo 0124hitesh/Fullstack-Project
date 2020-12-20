@@ -124,6 +124,7 @@
         position: absolute;
         top: -5px;
         right: -10px;
+        color: black;
     }
     #order_bar #order_count,#order_bar #total{
         padding: 20px 15px;
@@ -241,11 +242,14 @@
             background-color: #fff;
         }
         #oo #detail{
-            width: 360px;
-            left: 1.5px;
+            width: 350px;
+            left: 5px;
             z-index: 3;
         }
-        #oo #detail img{    width: 360px;}
+        #oo #detail img{    
+            width: 350px;
+            height: 250px;
+        }
         #oo #detail .fa-times-circle{
             top: 10px;
             right: 5px;
@@ -279,10 +283,10 @@
 
             <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
-                    <img src="img/vege1.jpg" alt="">
+                    <img src="img/g2.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme1</h2>
+                    <h2>Organic Spinach</h2>
                     <p>1 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">10</span>
@@ -291,10 +295,10 @@
             <hr class="hh">
             <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
-                    <img src="img/vege1.jpg" alt="">
+                    <img src="img/g4.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme2</h2>
+                    <h2>Rosted Veggies</h2>
                     <p>2 elit. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">20</span>
@@ -303,10 +307,10 @@
             <hr class="hh">
             <article class="items" onclick="fun(z=this.childNodes)">
                 <picture>
-                    <img src="img/vege1.jpg" alt="">
+                    <img src="img/g6.jpg" alt="">
                 </picture>
                 <article class="desc">
-                    <h2>Itemm_NAme3</h2>
+                    <h2>Tuna Tataki</h2>
                     <p>3 it. Accusamus inventore ullam neque incidunt architecto suscipit voluptates officiis quae enim labore..</p>
                 </article>
                 <span  class="rs sp">₹</span><span class="price sp">30</span>
@@ -398,7 +402,7 @@
         var para=document.getElementById('para');
 
         function fun(){
-            box.style.top='50px';
+            box.style.top='45px';
             var itm2=z[3].childNodes;
             itm.innerHTML=itm2[1].innerHTML;
             para.innerHTML=itm2[3].innerHTML;
