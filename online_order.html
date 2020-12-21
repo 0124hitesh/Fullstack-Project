@@ -80,6 +80,7 @@
     }
     .detail img{
         width: 450px;
+        height: 350px;
     }
     .detail h1{
         font-size: x-large;
@@ -122,8 +123,8 @@
     .fa-times-circle{
         font-size: 25px;
         position: absolute;
-        top: -5px;
-        right: -10px;
+        top: 10px;
+        right: 10px;
         color: black;
     }
     #order_bar #order_count,#order_bar #total{
@@ -329,7 +330,7 @@
                 Quantity
                 <article>
                     <button id="btn_1" onclick="dec()" disabled><i class="fa fa-minus-circle" id="minus"></i></button>
-                    <input type="number" id="quan_input" value="1" disabled>
+                    <input type="number" id="quan_input" value="1" disabled min="1">
                     <button id="btn_2" onclick="inc()"><i class="fa fa-plus-circle" id="plus"></i></button>
                 </article>
             </article>
