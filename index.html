@@ -35,7 +35,35 @@
         background-color: white;
         color: black;
     }
+    
+    #or{
+        position: fixed;
+        z-index: 5;
+        top: 20vh;
+        left: 40vw;
+        width: 360px;
+        height: 360px;
+        background-color: #212121;
+        border-radius: 5px;
+        color: white;
 
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #or_times{
+        color: white;
+        font-size: 25px;
+        position: absolute;
+        right: 15px;
+        top: 7px;
+        cursor: pointer;
+    }
+    #phone{
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
     @media (max-width: 361px){
         #right_bar{  display: none;
             position: relative;
@@ -141,7 +169,7 @@
             </datalist>
             <br>
 
-             <button type="button">Book Now</button>
+             <button type="button" onclick="fun()">Book Now</button>
 
              <section id="address">
                  <p class="addr">500 Terry Francois Street</p>
@@ -180,14 +208,13 @@
                     </a>
                   </div>
             </div>
-
-            
-
-            
-               
         </section>
+    </section>
 
-        
+    <section id="or">
+        <i class="far fa-times" id="or_times"></i>
+        <i class="fad fa-phone" id="phone" onclick="fun1()"></i>
+        <h3 style="text-align: center;">We're currently not accepting reservations online.</h3>
     </section>
 
     <script>
@@ -202,6 +229,16 @@
             day = '0' + day.toString();
         const dt_min=yr+"-"+mo+"-"+day;
         dt.setAttribute('min',dt_min)
+
+        var bo=document.getElementById('or');
+        function fun(){
+            bo.style.display='flex';
+        }
+        function fun1(e){bo.style.display='none'}
+        document.addEventListener('click',function(e){
+            if(e.target.id=='or_times')
+            bo.style.display='none';
+        })
     </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
